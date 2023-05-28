@@ -1,0 +1,5 @@
+/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/CMakeFiles/stock_qt_project.dir
+/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/CMakeFiles/stock_qt_project_autogen_timestamp_deps.dir
+/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/CMakeFiles/stock_qt_project_autogen.dir
