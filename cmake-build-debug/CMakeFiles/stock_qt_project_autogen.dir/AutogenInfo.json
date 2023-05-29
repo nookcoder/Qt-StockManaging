@@ -233,9 +233,33 @@
 			null
 		],
 		[
+			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/database/DBExceptionHandler.h",
+			"MU",
+			"BL3K65LMA5/moc_DBExceptionHandler.cpp",
+			null
+		],
+		[
+			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/database/SQLController.h",
+			"MU",
+			"BL3K65LMA5/moc_SQLController.cpp",
+			null
+		],
+		[
+			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/database/databaseConnection.h",
+			"MU",
+			"BL3K65LMA5/moc_databaseConnection.cpp",
+			null
+		],
+		[
 			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/mainWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainWindow.cpp",
+			null
+		],
+		[
+			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/panels/schmas/CheckingSchema.h",
+			"MU",
+			"KEQNEZ4QBK/moc_CheckingSchema.cpp",
 			null
 		],
 		[
@@ -356,12 +380,37 @@
 			null
 		],
 		[
+			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/database/DBExceptionHandler.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/database/SQLController.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/database/databaseConnection.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/database/dto/Schema.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/main.cpp",
 			"MU",
 			null
 		],
 		[
 			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/mainWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/wook/Desktop/\uc138\uc885\ub300/projects/stock-qt-project/panels/schmas/CheckingSchema.cpp",
 			"MU",
 			null
 		],

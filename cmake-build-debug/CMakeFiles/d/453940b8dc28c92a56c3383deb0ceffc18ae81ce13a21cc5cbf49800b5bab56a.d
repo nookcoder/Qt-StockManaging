@@ -45,9 +45,18 @@ stock_qt_project_autogen/timestamp: \
   /Users/wook/Desktop/세종대/projects/stock-qt-project/components/MenuButton.h \
   /Users/wook/Desktop/세종대/projects/stock-qt-project/components/SearchInput.cpp \
   /Users/wook/Desktop/세종대/projects/stock-qt-project/components/SearchInput.h \
+  /Users/wook/Desktop/세종대/projects/stock-qt-project/database/DBExceptionHandler.cpp \
+  /Users/wook/Desktop/세종대/projects/stock-qt-project/database/DBExceptionHandler.h \
+  /Users/wook/Desktop/세종대/projects/stock-qt-project/database/SQLController.cpp \
+  /Users/wook/Desktop/세종대/projects/stock-qt-project/database/SQLController.h \
+  /Users/wook/Desktop/세종대/projects/stock-qt-project/database/databaseConnection.cpp \
+  /Users/wook/Desktop/세종대/projects/stock-qt-project/database/databaseConnection.h \
+  /Users/wook/Desktop/세종대/projects/stock-qt-project/database/dto/Schema.cpp \
   /Users/wook/Desktop/세종대/projects/stock-qt-project/main.cpp \
   /Users/wook/Desktop/세종대/projects/stock-qt-project/mainWindow.cpp \
   /Users/wook/Desktop/세종대/projects/stock-qt-project/mainWindow.h \
+  /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/schmas/CheckingSchema.cpp \
+  /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/schmas/CheckingSchema.h \
   /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Account.cpp \
   /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Account.h \
   /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Dividend.cpp \

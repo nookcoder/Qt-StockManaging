@@ -6,8 +6,11 @@
 #include "panels/user/SignUp.h"
 #include "panels/user/UserMenu.h"
 #include "panels/user/StockMenu.h"
+#include "iostream"
+#include "database/SQLController.h"
 
-mainWindow::mainWindow() {}
+mainWindow::mainWindow() {
+}
 
 void mainWindow::run() {
     init();

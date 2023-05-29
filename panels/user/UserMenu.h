@@ -14,6 +14,7 @@ class UserMenu : public QWidget{
 public:
     explicit UserMenu(QMainWindow *parent = nullptr); // constructor
 
+    QPushButton* schemasButton = new MenuButton(this,"Check Schema");
     QPushButton* signUpButton = new MenuButton(this,"회원가입");
     QPushButton* stockButton = new MenuButton(this,"주식메뉴");
 //    QPushButton* followingButton = new MenuButton(this,"팔로우");

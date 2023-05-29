@@ -17,6 +17,7 @@ void UserMenu::initUi() {
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setAlignment(Qt::AlignCenter);
     layout->addWidget(label);
+    layout->addWidget(schemasButton);
     layout->addWidget(signUpButton);
     layout->addWidget(stockButton);
     this->setLayout(layout);
