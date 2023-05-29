@@ -17,7 +17,6 @@ public:
     explicit SearchInput(QWidget* parent = nullptr, QLabel *label= nullptr, QLineEdit *lineEdit = nullptr, QString buttonName = "검색");
     QString buttonName;
     QPushButton *searchButton;
-private:
 };
 
 

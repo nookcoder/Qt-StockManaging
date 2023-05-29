@@ -8,6 +8,7 @@
 #include "panels/user/StockMenu.h"
 #include "iostream"
 #include "database/SQLController.h"
+#include "panels/schmas/CheckingSchema.h"
 
 mainWindow::mainWindow() {
 }
@@ -30,16 +31,20 @@ void mainWindow::init() {
     auto* userMenu = new UserMenu(this); // 사용자 메뉴
     auto* stockMenu = new StockMenu(this); // 주식 관련 메뉴
     auto* signUp = new SignUp(this); // 유저 추가
-
+    auto* checkingSchema = new CheckingSchema(this);
     stack->addWidget(userMenu);
     stack->addWidget(stockMenu);
     stack->addWidget(signUp);
+    stack->addWidget(checkingSchema);
 
     QPushButton::connect(userMenu->signUpButton, &QPushButton::clicked, [=](){
         stack->setCurrentWidget(signUp);
     });
     QPushButton::connect(userMenu->stockButton, &QPushButton::clicked, [=](){
         stack->setCurrentWidget(stockMenu);
+    });
+    QPushButton::connect(userMenu->schemasButton, &QPushButton::clicked, [=](){
+        stack->setCurrentWidget(checkingSchema);
     });
     QPushButton::connect(stockMenu->backButton, &QPushButton::clicked, [=](){
         stack->setCurrentWidget(userMenu);
