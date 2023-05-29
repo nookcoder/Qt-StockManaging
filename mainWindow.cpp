@@ -4,8 +4,8 @@
 
 #include "mainWindow.h"
 #include "panels/user/SignUp.h"
-#include "panels/user/UserMenu.h"
-#include "panels/user/StockMenu.h"
+#include "panels/UserMenu.h"
+#include "panels/StockMenu.h"
 #include "iostream"
 #include "database/SQLController.h"
 #include "panels/schmas/CheckingSchema.h"
@@ -45,6 +45,9 @@ void mainWindow::init() {
     });
     QPushButton::connect(userMenu->schemasButton, &QPushButton::clicked, [=](){
         stack->setCurrentWidget(checkingSchema);
+    });
+    QPushButton::connect(checkingSchema->backButton, &QPushButton::clicked, [=](){
+        stack->setCurrentWidget(userMenu);
     });
     QPushButton::connect(stockMenu->backButton, &QPushButton::clicked, [=](){
         stack->setCurrentWidget(userMenu);

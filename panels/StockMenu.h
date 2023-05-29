@@ -9,16 +9,18 @@
 #include <QTabWidget>
 #include <QLabel>
 #include <QPushButton>
-#include "../../components/SearchInput.h"
+#include "../components/SearchInput.h"
 
 class StockMenu : public QWidget{
 public:
     explicit StockMenu(QWidget* parent = nullptr);
     QPushButton *backButton = new QPushButton("뒤로가기");
     QHBoxLayout *topLayout = new QHBoxLayout();
+    SearchInput *loginInput;
+    QLineEdit *pEdit;
 private:
     void initUi();
-    SearchInput *loginInput;
+
 };
 
 

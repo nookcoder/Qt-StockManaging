@@ -7,8 +7,8 @@
 
 #include "QWidget"
 #include "QPushButton"
-#include "../../components/MenuButton.h"
-#include "../../mainWindow.h"
+#include "../components/MenuButton.h"
+#include "../mainWindow.h"
 
 class UserMenu : public QWidget{
 public:

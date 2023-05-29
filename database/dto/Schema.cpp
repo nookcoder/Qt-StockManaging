@@ -12,5 +12,4 @@ public:
     SQLULEN columDataSize;
     SQLSMALLINT decimalDigits;
     SQLSMALLINT nullable;
-
 };

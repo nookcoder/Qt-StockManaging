@@ -10,7 +10,7 @@
 #include "QStackedWidget"
 #include <QVBoxLayout>
 #include "QWidget"
-#include "panels/user/UserMenu.h"
+#include "panels/UserMenu.h"
 
 class mainWindow: public QMainWindow{
 public:

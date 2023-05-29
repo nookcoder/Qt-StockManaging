@@ -15,9 +15,9 @@
 class CheckingSchema : public QWidget{
 public:
     explicit CheckingSchema(QWidget *parent = nullptr);
+    QPushButton *backButton = new QPushButton("뒤로가기");
 private:
     void initUi();
-    void bindEvent();
     void setTableWidgetBySchema(SQLCHAR *target);
     QLineEdit *word = new QLineEdit();
     QTableWidget* table;

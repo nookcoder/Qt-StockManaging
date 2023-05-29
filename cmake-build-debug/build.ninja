@@ -94,13 +94,13 @@ build CMakeFiles/stock_qt_project.dir/panels/user/Account.cpp.o: CXX_COMPILER__s
   OBJECT_DIR = CMakeFiles/stock_qt_project.dir
   OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/panels/user
 
-build CMakeFiles/stock_qt_project.dir/panels/user/UserMenu.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/UserMenu.cpp || cmake_object_order_depends_target_stock_qt_project
+build CMakeFiles/stock_qt_project.dir/panels/UserMenu.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/UserMenu.cpp || cmake_object_order_depends_target_stock_qt_project
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/stock_qt_project.dir/panels/user/UserMenu.cpp.o.d
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/panels/UserMenu.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
   INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/stock_qt_project.dir
-  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/panels/user
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/panels
 
 build CMakeFiles/stock_qt_project.dir/components/MenuButton.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/components/MenuButton.cpp || cmake_object_order_depends_target_stock_qt_project
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
@@ -126,13 +126,13 @@ build CMakeFiles/stock_qt_project.dir/panels/user/Dividend.cpp.o: CXX_COMPILER__
   OBJECT_DIR = CMakeFiles/stock_qt_project.dir
   OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/panels/user
 
-build CMakeFiles/stock_qt_project.dir/panels/user/StockMenu.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/StockMenu.cpp || cmake_object_order_depends_target_stock_qt_project
+build CMakeFiles/stock_qt_project.dir/panels/StockMenu.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/StockMenu.cpp || cmake_object_order_depends_target_stock_qt_project
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/stock_qt_project.dir/panels/user/StockMenu.cpp.o.d
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/panels/StockMenu.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
   INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/stock_qt_project.dir
-  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/panels/user
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/panels
 
 build CMakeFiles/stock_qt_project.dir/components/SearchInput.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/components/SearchInput.cpp || cmake_object_order_depends_target_stock_qt_project
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
@@ -142,13 +142,13 @@ build CMakeFiles/stock_qt_project.dir/components/SearchInput.cpp.o: CXX_COMPILER
   OBJECT_DIR = CMakeFiles/stock_qt_project.dir
   OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/components
 
-build CMakeFiles/stock_qt_project.dir/panels/user/interestingCompany.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/interestingCompany.cpp || cmake_object_order_depends_target_stock_qt_project
+build CMakeFiles/stock_qt_project.dir/panels/interesting/interestingCompany.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/interesting/interestingCompany.cpp || cmake_object_order_depends_target_stock_qt_project
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/stock_qt_project.dir/panels/user/interestingCompany.cpp.o.d
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/panels/interesting/interestingCompany.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
   INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/stock_qt_project.dir
-  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/panels/user
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/panels/interesting
 
 build CMakeFiles/stock_qt_project.dir/database/databaseConnection.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/database/databaseConnection.cpp || cmake_object_order_depends_target_stock_qt_project
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
@@ -190,6 +190,62 @@ build CMakeFiles/stock_qt_project.dir/database/dto/Schema.cpp.o: CXX_COMPILER__s
   OBJECT_DIR = CMakeFiles/stock_qt_project.dir
   OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/database/dto
 
+build CMakeFiles/stock_qt_project.dir/panels/interesting/AddingInterestingCompany.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/panels/interesting/AddingInterestingCompany.cpp || cmake_object_order_depends_target_stock_qt_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/panels/interesting/AddingInterestingCompany.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/stock_qt_project.dir
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/panels/interesting
+
+build CMakeFiles/stock_qt_project.dir/database/dto/Company.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/database/dto/Company.cpp || cmake_object_order_depends_target_stock_qt_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/database/dto/Company.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/stock_qt_project.dir
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/database/dto
+
+build CMakeFiles/stock_qt_project.dir/database/dto/Address.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/database/dto/Address.cpp || cmake_object_order_depends_target_stock_qt_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/database/dto/Address.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/stock_qt_project.dir
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/database/dto
+
+build CMakeFiles/stock_qt_project.dir/constants/type/CompanySearchType.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/constants/type/CompanySearchType.cpp || cmake_object_order_depends_target_stock_qt_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/constants/type/CompanySearchType.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/stock_qt_project.dir
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/constants/type
+
+build CMakeFiles/stock_qt_project.dir/components/ButtonWidgetItem.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/components/ButtonWidgetItem.cpp || cmake_object_order_depends_target_stock_qt_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/components/ButtonWidgetItem.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/stock_qt_project.dir
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/components
+
+build CMakeFiles/stock_qt_project.dir/constants/type/UserSearchType.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/constants/type/UserSearchType.cpp || cmake_object_order_depends_target_stock_qt_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/constants/type/UserSearchType.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/stock_qt_project.dir
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/constants/type
+
+build CMakeFiles/stock_qt_project.dir/database/dto/Member.cpp.o: CXX_COMPILER__stock_qt_project_Debug /Users/wook/Desktop/세종대/projects/stock-qt-project/database/dto/Member.cpp || cmake_object_order_depends_target_stock_qt_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/stock_qt_project.dir/database/dto/Member.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/wook/Desktop/세종대/projects/stock-qt-project/cmake-build-debug/stock_qt_project_autogen/include -isystem /opt/homebrew/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Headers -iframework /Users/wook/Development/qt/6.4.2/macos/lib -isystem /Users/wook/Development/qt/6.4.2/macos/mkspecs/macx-clang -isystem /Users/wook/Development/qt/6.4.2/macos/include -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Headers -isystem /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/stock_qt_project.dir
+  OBJECT_FILE_DIR = CMakeFiles/stock_qt_project.dir/database/dto
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target stock_qt_project
@@ -198,7 +254,7 @@ build CMakeFiles/stock_qt_project.dir/database/dto/Schema.cpp.o: CXX_COMPILER__s
 #############################################
 # Link the executable stock_qt_project
 
-build stock_qt_project: CXX_EXECUTABLE_LINKER__stock_qt_project_Debug CMakeFiles/stock_qt_project.dir/stock_qt_project_autogen/mocs_compilation.cpp.o CMakeFiles/stock_qt_project.dir/main.cpp.o CMakeFiles/stock_qt_project.dir/mainWindow.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/SignUp.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/Following.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/Account.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/UserMenu.cpp.o CMakeFiles/stock_qt_project.dir/components/MenuButton.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/MyStock.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/Dividend.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/StockMenu.cpp.o CMakeFiles/stock_qt_project.dir/components/SearchInput.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/interestingCompany.cpp.o CMakeFiles/stock_qt_project.dir/database/databaseConnection.cpp.o CMakeFiles/stock_qt_project.dir/database/DBExceptionHandler.cpp.o CMakeFiles/stock_qt_project.dir/database/SQLController.cpp.o CMakeFiles/stock_qt_project.dir/panels/schmas/CheckingSchema.cpp.o CMakeFiles/stock_qt_project.dir/database/dto/Schema.cpp.o | /opt/homebrew/lib/libodbc.dylib /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Versions/A/QtGui /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Versions/A/QtCore || stock_qt_project_autogen stock_qt_project_autogen_timestamp_deps
+build stock_qt_project: CXX_EXECUTABLE_LINKER__stock_qt_project_Debug CMakeFiles/stock_qt_project.dir/stock_qt_project_autogen/mocs_compilation.cpp.o CMakeFiles/stock_qt_project.dir/main.cpp.o CMakeFiles/stock_qt_project.dir/mainWindow.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/SignUp.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/Following.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/Account.cpp.o CMakeFiles/stock_qt_project.dir/panels/UserMenu.cpp.o CMakeFiles/stock_qt_project.dir/components/MenuButton.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/MyStock.cpp.o CMakeFiles/stock_qt_project.dir/panels/user/Dividend.cpp.o CMakeFiles/stock_qt_project.dir/panels/StockMenu.cpp.o CMakeFiles/stock_qt_project.dir/components/SearchInput.cpp.o CMakeFiles/stock_qt_project.dir/panels/interesting/interestingCompany.cpp.o CMakeFiles/stock_qt_project.dir/database/databaseConnection.cpp.o CMakeFiles/stock_qt_project.dir/database/DBExceptionHandler.cpp.o CMakeFiles/stock_qt_project.dir/database/SQLController.cpp.o CMakeFiles/stock_qt_project.dir/panels/schmas/CheckingSchema.cpp.o CMakeFiles/stock_qt_project.dir/database/dto/Schema.cpp.o CMakeFiles/stock_qt_project.dir/panels/interesting/AddingInterestingCompany.cpp.o CMakeFiles/stock_qt_project.dir/database/dto/Company.cpp.o CMakeFiles/stock_qt_project.dir/database/dto/Address.cpp.o CMakeFiles/stock_qt_project.dir/constants/type/CompanySearchType.cpp.o CMakeFiles/stock_qt_project.dir/components/ButtonWidgetItem.cpp.o CMakeFiles/stock_qt_project.dir/constants/type/UserSearchType.cpp.o CMakeFiles/stock_qt_project.dir/database/dto/Member.cpp.o | /opt/homebrew/lib/libodbc.dylib /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Versions/A/QtGui /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Versions/A/QtCore || stock_qt_project_autogen stock_qt_project_autogen_timestamp_deps
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2
   LINK_LIBRARIES = -Wl,-rpath,/Users/wook/Development/qt/6.4.2/macos/lib  /opt/homebrew/lib/libodbc.dylib  /Users/wook/Development/qt/6.4.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/wook/Development/qt/6.4.2/macos/lib/QtGui.framework/Versions/A/QtGui  /Users/wook/Development/qt/6.4.2/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -Xlinker -framework -Xlinker OpenGL  -Xlinker -framework -Xlinker AGL  -framework AppKit  -framework ImageIO  -framework Metal
   LINK_PATH = -F/Users/wook/Development/qt/6.4.2/macos/lib
@@ -257,7 +313,7 @@ build stock_qt_project_autogen/timestamp stock_qt_project_autogen/mocs_compilati
 #############################################
 # Phony custom command for CMakeFiles/stock_qt_project_autogen_timestamp_deps
 
-build CMakeFiles/stock_qt_project_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/stock_qt_project_autogen_timestamp_deps: phony /opt/homebrew/lib/libodbc.dylib /Users/wook/Development/qt/6.4.2/macos/./libexec/moc /Users/wook/Development/qt/6.4.2/macos/./libexec/uic
+build CMakeFiles/stock_qt_project_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/stock_qt_project_autogen_timestamp_deps: phony /Users/wook/Development/qt/6.4.2/macos/./libexec/moc /Users/wook/Development/qt/6.4.2/macos/./libexec/uic /opt/homebrew/lib/libodbc.dylib
 
 
 #############################################
