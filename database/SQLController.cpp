@@ -240,12 +240,69 @@ Member *SQLController::getMember(int searchType, string value) {
     }
 }
 
+SQLINTEGER SQLController::addAddress(Address *address) {
+    if (databaseConnection::connect() == SQL_SUCCESS) {
+        SQLCHAR query[500];
+        snprintf((char *) query, 500,
+                 "INSERT INTO ADDRESS(DONG, DO, DETAIL) VALUES ('%s','%s','%s')",
+                 address->DONG.c_str(), address->DO.c_str(), address->DETAIL.c_str());
+        SQLRETURN direct = SQLExecDirect(databaseConnection::hstmt, query, SQL_NTS);
+        if (direct != SQL_SUCCESS) {
+            DBExceptionHandler::HandleDiagnosticRecord(databaseConnection::hstmt, SQL_HANDLE_STMT, direct);
+        }
+
+        SQLCHAR selectQuery[101];
+        snprintf((char *) selectQuery, 500,
+                 "SELECT ADDRESS_ID FROM ADDRESS WHERE DONG = '%s' AND DO='%s' AND DETAIL='%s'", address->DONG.c_str(),
+                 address->DO.c_str(), address->DETAIL.c_str());
+        SQLRETURN direct2 = SQLExecDirect(databaseConnection::hstmt, selectQuery, SQL_NTS);
+        if (direct2 != SQL_SUCCESS) {
+            DBExceptionHandler::HandleDiagnosticRecord(databaseConnection::hstmt, SQL_HANDLE_STMT, direct2);
+        }
+
+        SQLINTEGER addressId;
+        int address;
+        SQLBindCol(databaseConnection::hstmt, 1, SQL_C_LONG, &addressId, 0, nullptr);
+        while(SQLFetch(databaseConnection::hstmt) != SQL_NO_DATA){
+            address = addressId;
+        }
+        SQLCloseCursor(databaseConnection::hstmt);
+        SQLFreeHandle(SQL_HANDLE_STMT, databaseConnection::hstmt);
+        databaseConnection::disconnect();
+        return address;
+    }
+}
+
+void SQLController::addMember(Member *member, Address *address) {
+    if (databaseConnection::connect() == SQL_SUCCESS) {
+        SQLCHAR query[300];
+        int addressId = addAddress(address);
+        databaseConnection::connect();
+        cout << "ADDRESS_ID : " << addressId << endl;
+        snprintf((char *) query, 300,
+                 "INSERT INTO MEMBER(NAME, EMAIL, PHONE, ADDRESS) VALUES ('%s','%s','%s',%d)",
+                 member->name.c_str(), member->phone.c_str(), member->email.c_str(), addressId);
+        cout << "QUERY : "<< query << endl;
+        SQLRETURN direct = SQLExecDirect(databaseConnection::hstmt, query, SQL_NTS);
+        if (direct != SQL_SUCCESS) {
+            DBExceptionHandler::HandleDiagnosticRecord(databaseConnection::hstmt, SQL_HANDLE_STMT, direct);
+            return;
+        }
+
+        SQLCloseCursor(databaseConnection::hstmt);
+        SQLFreeHandle(SQL_HANDLE_STMT, databaseConnection::hstmt);
+        databaseConnection::disconnect();
+    }
+}
+
+
 void SQLController::addInterestingCompany(const string &userEmail, string companyCode) {
     if (databaseConnection::connect() == SQL_SUCCESS) {
         SQLCHAR query[101];
         Member *member = getMember(UserSearchType::EMAIL, userEmail);
         databaseConnection::connect();
-        snprintf((char *) query, 101, "INSERT INTO INTERESING(MEMBER, COMPANY) VALUES (%d,'%s')", member[0].memberId,
+        snprintf((char *) query, 101, "INSERT INTO INTERESING(MEMBER, COMPANY) VALUES (%d,'%s')",
+                 member[0].memberId,
                  companyCode.c_str());
         SQLRETURN direct = SQLExecDirect(databaseConnection::hstmt, query, SQL_NTS);
         if (direct != SQL_SUCCESS) {
@@ -324,6 +381,7 @@ Company *SQLController::getInterestingCompanyList(string userEmail, int type, st
     databaseConnection::disconnect();
     return company;
 }
+
 
 void SQLController::deleteInterestingCompany(const string &userEmail, string companyCode) {
     if (databaseConnection::connect() == SQL_SUCCESS) {

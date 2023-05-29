@@ -3,8 +3,8 @@
 //
 
 #include "StockMenu.h"
-#include "user/MyStock.h"
-#include "user/Dividend.h"
+#include "stock/MyStock.h"
+#include "stock/Dividend.h"
 #include "user/Following.h"
 #include "interesting/interestingCompany.h"
 #include "interesting/AddingInterestingCompany.h"

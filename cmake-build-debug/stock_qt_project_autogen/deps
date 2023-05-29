@@ -62,6 +62,8 @@ stock_qt_project_autogen/timestamp: \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/main.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/mainWindow.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/mainWindow.h \
+	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/MainMenu.cpp \
+	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/MainMenu.h \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/StockMenu.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/StockMenu.h \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/UserMenu.cpp \
@@ -72,16 +74,18 @@ stock_qt_project_autogen/timestamp: \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/interesting/interestingCompany.h \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/schmas/CheckingSchema.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/schmas/CheckingSchema.h \
+	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/stock/Dividend.cpp \
+	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/stock/Dividend.h \
+	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/stock/MyStock.cpp \
+	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/stock/MyStock.h \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Account.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Account.h \
-	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Dividend.cpp \
-	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Dividend.h \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Following.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Following.h \
-	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/MyStock.cpp \
-	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/MyStock.h \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/SignUp.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/SignUp.h \
+	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Withdrawal.cpp \
+	/Users/wook/Desktop/세종대/projects/stock-qt-project/panels/user/Withdrawal.h \
 	/Users/wook/Development/qt/6.4.2/macos/lib/cmake/Qt6/FindWrapAtomic.cmake \
 	/Users/wook/Development/qt/6.4.2/macos/lib/cmake/Qt6/FindWrapOpenGL.cmake \
 	/Users/wook/Development/qt/6.4.2/macos/lib/cmake/Qt6/Qt6Config.cmake \

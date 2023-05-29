@@ -3,9 +3,9 @@
 //
 
 #include "mainWindow.h"
-#include "panels/user/SignUp.h"
-#include "panels/UserMenu.h"
+#include "panels/MainMenu.h"
 #include "panels/StockMenu.h"
+#include "panels/UserMenu.h"
 #include "iostream"
 #include "database/SQLController.h"
 #include "panels/schmas/CheckingSchema.h"
@@ -28,34 +28,34 @@ void mainWindow::run() {
 void mainWindow::init() {
     stack = new QStackedWidget(this);
 
-    auto* userMenu = new UserMenu(this); // 사용자 메뉴
+    auto* mainMenu = new MainMenu(this); // 사용자 메뉴
     auto* stockMenu = new StockMenu(this); // 주식 관련 메뉴
-    auto* signUp = new SignUp(this); // 유저 추가
+    auto* userMenu = new UserMenu(this); // 유저 추가
     auto* checkingSchema = new CheckingSchema(this);
-    stack->addWidget(userMenu);
+    stack->addWidget(mainMenu);
     stack->addWidget(stockMenu);
-    stack->addWidget(signUp);
+    stack->addWidget(userMenu);
     stack->addWidget(checkingSchema);
 
-    QPushButton::connect(userMenu->signUpButton, &QPushButton::clicked, [=](){
-        stack->setCurrentWidget(signUp);
+    QPushButton::connect(mainMenu->signUpButton, &QPushButton::clicked, [=](){
+        stack->setCurrentWidget(userMenu);
     });
-    QPushButton::connect(userMenu->stockButton, &QPushButton::clicked, [=](){
+    QPushButton::connect(mainMenu->stockButton, &QPushButton::clicked, [=](){
         stack->setCurrentWidget(stockMenu);
     });
-    QPushButton::connect(userMenu->schemasButton, &QPushButton::clicked, [=](){
+    QPushButton::connect(mainMenu->schemasButton, &QPushButton::clicked, [=](){
         stack->setCurrentWidget(checkingSchema);
     });
     QPushButton::connect(checkingSchema->backButton, &QPushButton::clicked, [=](){
-        stack->setCurrentWidget(userMenu);
+        stack->setCurrentWidget(mainMenu);
     });
     QPushButton::connect(stockMenu->backButton, &QPushButton::clicked, [=](){
-        stack->setCurrentWidget(userMenu);
+        stack->setCurrentWidget(mainMenu);
     });
-    QPushButton::connect(signUp->backButton, &QPushButton::clicked, [=](){
-        stack->setCurrentWidget(userMenu);
+    QPushButton::connect(userMenu->backButton, &QPushButton::clicked, [=](){
+        stack->setCurrentWidget(mainMenu);
     });
 
 
-    stack->setCurrentWidget(userMenu);
+    stack->setCurrentWidget(mainMenu);
 }

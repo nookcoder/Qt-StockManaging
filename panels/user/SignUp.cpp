@@ -3,8 +3,8 @@
 //
 
 #include "SignUp.h"
-
-SignUp::SignUp(mainWindow *parent) {
+#include "../../database/SQLController.h"
+SignUp::SignUp(QWidget *parent) {
     initUi();
 //    bindButtonEvent(parent);
 }
@@ -22,9 +22,13 @@ void SignUp::initUi() {
     dongLayout->addWidget(dongLine);
     detailAddressLayout->addWidget(detailAddress);
     detailAddressLayout->addWidget(detailAddressLine);
-    buttonLayout->addWidget(backButton);
+    signUpButton->setFixedSize(200,50);
     buttonLayout->addWidget(signUpButton);
-
+    QPushButton::connect(signUpButton, &QPushButton::clicked, this, [=](){
+       Address* address = new Address(siLine->text(), dongLine->text(), detailAddressLine->text());
+       Member* member = new Member(nameLine->text(), emailLine->text(), phoneLine->text());
+       SQLController::addMember(member, address);
+    });
     mainLayout->addLayout(nameLayout);
     mainLayout->addLayout(emailLayout);
     mainLayout->addLayout(phoneLayout);
@@ -34,10 +38,4 @@ void SignUp::initUi() {
     mainLayout->addLayout(buttonLayout);
 
     setLayout(mainLayout);
-}
-
-void SignUp::bindButtonEvent(mainWindow *parent) {
-//    QPushButton::connect(backButton, &QPushButton::clicked, [&parent](){
-//        parent->backToUserMenu();
-//    });
 }

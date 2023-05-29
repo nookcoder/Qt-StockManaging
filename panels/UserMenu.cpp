@@ -1,32 +1,20 @@
 //
-// Created by 김현욱 on 2023/05/27.
+// Created by 김현욱 on 2023/05/30.
 //
 
-#include <QLabel>
-#include <QVBoxLayout>
 #include "UserMenu.h"
+#include "user/SignUp.h"
 
-UserMenu::UserMenu(QMainWindow *parent) : QWidget(parent){
+UserMenu::UserMenu(QWidget *parent) : QWidget(parent){
     initUi();
 }
 
 void UserMenu::initUi() {
-    QLabel* label = new QLabel("사용자 메뉴");
-    label->setAlignment(Qt::AlignCenter);
-    label->setMargin(50);
-    QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setAlignment(Qt::AlignCenter);
-    layout->addWidget(label);
-    layout->addWidget(schemasButton);
-    layout->addWidget(signUpButton);
-    layout->addWidget(stockButton);
-    this->setLayout(layout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    SignUp *signUp = new SignUp();
+    tabWidget->addTab(signUp, "회원가입");
+    backButton->setFixedSize(100,25);
+    mainLayout->addWidget(backButton);
+    mainLayout->addWidget(tabWidget);
+    setLayout(mainLayout);
 }
-
-void UserMenu::turnPanel(QWidget *oldWidget, QWidget *newWidget) {
-    oldWidget->hide();
-    newWidget->show();
-}
-
-
-

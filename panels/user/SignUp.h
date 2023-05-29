@@ -7,13 +7,11 @@
 
 #include <QLabel>
 #include <QPushButton>
-#include "../../mainWindow.h"
 #include "QLineEdit"
+#include "QBoxLayout"
 class SignUp: public QWidget {
 public:
-    explicit SignUp(mainWindow *parent = nullptr);
-    QPushButton *backButton = new QPushButton("뒤로가기");
-
+    explicit SignUp(QWidget *parent = nullptr);
 private:
     QLabel* name = new QLabel("이름 : ");
     QLabel* email = new QLabel("이메일 : ");
@@ -41,7 +39,6 @@ private:
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     void initUi();
-    void bindButtonEvent(mainWindow *parent);
 };
 
 
