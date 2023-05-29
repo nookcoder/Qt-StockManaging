@@ -18,7 +18,12 @@ public:
     static Schema* getSchema(SQLCHAR *schemaName);
     static Company* getCompanyList(int searchType, string value);
     static Member* getMember(int searchType, string value);
+    static Company* getInterestingCompanyList(string userEmail, int type, string value);
+
     static void addInterestingCompany(const string& userEmail, string companyCode);
+
+    static void deleteInterestingCompany(const string& userEmail, string companyCode);
+
 };
 
 

@@ -221,9 +221,6 @@ Member *SQLController::getMember(int searchType, string value) {
 
         int i = 0;
         while (SQLFetch(databaseConnection::hstmt) != SQL_NO_DATA) {
-            cout << "Member No: " << memberNo << "Member Name: " << name << "Member Phone: " << phone
-                 << "Member Email: " << email << "Member Address Id: " << addressId << "Member Account Id: " << accountId
-                 << endl;
             string sEmail = (char *) email;
             string sPhone = (char *) phone;
             string sName = (char *) name;
@@ -246,9 +243,96 @@ Member *SQLController::getMember(int searchType, string value) {
 void SQLController::addInterestingCompany(const string &userEmail, string companyCode) {
     if (databaseConnection::connect() == SQL_SUCCESS) {
         SQLCHAR query[101];
-        Member* member = getMember(UserSearchType::EMAIL, userEmail);
+        Member *member = getMember(UserSearchType::EMAIL, userEmail);
         databaseConnection::connect();
-        snprintf((char *) query, 101, "INSERT INTO INTERESING(MEMBER, COMPANY) VALUES (%d,'%s')", member[0].memberId, companyCode.c_str());
+        snprintf((char *) query, 101, "INSERT INTO INTERESING(MEMBER, COMPANY) VALUES (%d,'%s')", member[0].memberId,
+                 companyCode.c_str());
+        SQLRETURN direct = SQLExecDirect(databaseConnection::hstmt, query, SQL_NTS);
+        if (direct != SQL_SUCCESS) {
+            DBExceptionHandler::HandleDiagnosticRecord(databaseConnection::hstmt, SQL_HANDLE_STMT, direct);
+            return;
+        }
+
+        SQLCloseCursor(databaseConnection::hstmt);
+        SQLFreeHandle(SQL_HANDLE_STMT, databaseConnection::hstmt);
+        databaseConnection::disconnect();
+    }
+}
+
+Company *SQLController::getInterestingCompanyList(string userEmail, int type, string value) {
+    databaseConnection::connect();
+    Member *member = getMember(UserSearchType::EMAIL, userEmail);
+    databaseConnection::connect();
+    SQLCHAR query[300];
+    switch (type) {
+        case CompanySearchType::ALL :
+            snprintf((char *) query, 300,
+                     "SELECT COMPANY_CODE, NAME, EMAIL, PHONE, SHARES FROM COMPANY AS C, INTERESING AS I WHERE I.MEMBER = '%d' AND I.COMPANY = C.COMPANY_CODE",
+                     member[0].memberId);
+            cout << query << endl;
+            cout << "Member Id : " << member[0].memberId;
+            break;
+        case CompanySearchType::COMPANY_CODE :
+            snprintf((char *) query, 101,
+                     "SELECT C.COMPANY_CODE, C.NAME, C.EMAIL, C.PHONE, C.SHARES FROM COMPANY as C, INTERESING as I WHERE I.MEMBER = '%d' AND I.COMPANY = C.COMPANY_CODE AND C.COMPANY_CODE='%s'",
+                     member[0].memberId, value.c_str());
+            break;
+        case CompanySearchType::NAME:
+            snprintf((char *) query, 101,
+                     "SELECT C.COMPANY_CODE, C.NAME, C.EMAIL, C.PHONE, C.SHARES FROM COMPANY as C, INTERESING as I WHERE I.MEMBER = '%d' AND I.COMPANY = C.COMPANY_CODE AND C.NAME='%s'",
+                     member[0].memberId, value.c_str());
+            break;
+    }
+    SQLRETURN direct = SQLExecDirect(databaseConnection::hstmt, query, SQL_NTS);
+    if (direct != SQL_SUCCESS) {
+        DBExceptionHandler::HandleDiagnosticRecord(databaseConnection::hstmt, SQL_HANDLE_STMT, direct);
+        return nullptr;
+    }
+
+    SQLCHAR companyCode[20];
+    SQLCHAR name[50];
+    SQLCHAR email[50];
+    SQLCHAR phone[20];
+    SQLBIGINT shares;
+    SQLINTEGER address;
+
+    Company *company = new Company[50];
+    SQLBindCol(databaseConnection::hstmt, 1, SQL_C_CHAR, companyCode, 20, nullptr);
+    SQLBindCol(databaseConnection::hstmt, 2, SQL_C_CHAR, name, 50, nullptr);
+    SQLBindCol(databaseConnection::hstmt, 3, SQL_C_CHAR, email, 50, nullptr);
+    SQLBindCol(databaseConnection::hstmt, 4, SQL_C_CHAR, phone, 20, nullptr);
+    SQLBindCol(databaseConnection::hstmt, 5, SQL_C_SBIGINT, &shares, sizeof(shares), nullptr);
+    SQLBindCol(databaseConnection::hstmt, 6, SQL_C_SLONG, &address, 0, nullptr);
+
+    int i = 0;
+    while (SQLFetch(databaseConnection::hstmt) != SQL_NO_DATA) {
+        string sCompanyCode = string((char *) companyCode);
+        string sName = string((char *) name);
+        string sEmail = string((char *) email);
+        string sPhone = string((char *) phone);
+        company[i].name = sName;
+        company[i].email = sEmail;
+        company[i].companyCode = sCompanyCode;
+        company[i].phone = sPhone;
+        company[i].shares = shares;
+        company[i].address = address;
+        i++;
+    }
+    company[i].companyCode = "-1";
+    SQLCloseCursor(databaseConnection::hstmt);
+    SQLFreeHandle(SQL_HANDLE_STMT, databaseConnection::hstmt);
+    databaseConnection::disconnect();
+    return company;
+}
+
+void SQLController::deleteInterestingCompany(const string &userEmail, string companyCode) {
+    if (databaseConnection::connect() == SQL_SUCCESS) {
+        SQLCHAR query[101];
+        Member *member = getMember(UserSearchType::EMAIL, userEmail);
+        databaseConnection::connect();
+        snprintf((char *) query, 101, "DELETE FROM INTERESING WHERE MEMBER = '%d' AND COMPANY = '%s'",
+                 member[0].memberId,
+                 companyCode.c_str());
         SQLRETURN direct = SQLExecDirect(databaseConnection::hstmt, query, SQL_NTS);
         if (direct != SQL_SUCCESS) {
             DBExceptionHandler::HandleDiagnosticRecord(databaseConnection::hstmt, SQL_HANDLE_STMT, direct);

@@ -51,7 +51,6 @@ void AddingInterestingCompany::initUi() {
 }
 
 void AddingInterestingCompany::setTableWidgetByCompanyList(int type, string word) {
-    cout << word;
     auto companyList = SQLController::getCompanyList(type, word);
     int i = 0;
     table->clearContents();

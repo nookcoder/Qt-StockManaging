@@ -43,7 +43,7 @@ void StockMenu::initUi() {
     MyStock *myStock = new MyStock(tabWidget); // 나의 주식
     Dividend *dividend = new Dividend(tabWidget); // 나의 배당
     Following *following = new Following(tabWidget); //
-    interestingCompany *interesting = new interestingCompany(tabWidget); // 나의 관심종목
+    interestingCompany *interesting = new interestingCompany(this); // 나의 관심종목
     AddingInterestingCompany *addingInterestingCompany = new AddingInterestingCompany(this); // 관심종목 추가
     tabWidget->addTab(myStock, "나의 주식");
     tabWidget->addTab(dividend, "나의 배당");

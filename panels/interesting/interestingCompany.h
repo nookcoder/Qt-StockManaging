@@ -7,13 +7,20 @@
 
 
 #include <QWidget>
+#include "string"
+#include <QTableWidget>
+#include "../StockMenu.h"
 
+using namespace std;
 class interestingCompany: public QWidget{
 public:
-    explicit interestingCompany(QWidget* parent = nullptr);
+    explicit interestingCompany(StockMenu* parent = nullptr);
+    StockMenu* parent;
+
 private:
     void initUi();
-
+    void setTableWidgetByCompanyList(int type, string word);
+    QTableWidget* table;
 };
 
 
