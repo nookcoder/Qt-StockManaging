@@ -5,28 +5,24 @@
 #include <QTableWidget>
 #include "MyStock.h"
 #include "../../components/SearchInput.h"
+#include "../../database/SQLController.h"
+#include "../../constants/type/UserSearchType.cpp"
 
-MyStock::MyStock(QWidget *parent) : QWidget(parent){
+MyStock::MyStock(StockMenu *parent) : QWidget(parent){
     initUi();
+    this->parent = parent;
 }
 
 void MyStock::initUi() {
-
-    QTableWidget* table = new QTableWidget(3, 2); // 3행 2열의 표를 생성
-
-    QTableWidgetItem *item1 = new QTableWidgetItem("Cell 1");
-    QTableWidgetItem *item2 = new QTableWidgetItem("Cell 2");
-    QTableWidgetItem *item3 = new QTableWidgetItem("Cell 3");
-    QTableWidgetItem *item4 = new QTableWidgetItem("Cell 4");
-    QTableWidgetItem *item5 = new QTableWidgetItem("Cell 5");
-    QTableWidgetItem *item6 = new QTableWidgetItem("Cell 6");
-
-    table->setItem(0, 0, item1); // (0, 0) 위치에 아이템 설정
-    table->setItem(0, 1, item2); // (0, 1) 위치에 아이템 설정
-    table->setItem(1, 0, item3); // (1, 0) 위치에 아이템 설정
-    table->setItem(1, 1, item4); // (1, 1) 위치에 아이템 설정
-    table->setItem(2, 0, item5); // (2, 0) 위치에 아이템 설정
-    table->setItem(2, 1, item6); // (2, 1) 위치에 아이템 설정
+    auto* list = new QStringList;
+    list->push_back("종목코드");
+    list->push_back("회사이름");
+    list->push_back("회사이메일");
+    list->push_back("회사전화번호");
+    list->push_back("소유한 주식 수");
+    list->push_back("받은 총 배당 금액");
+    QTableWidget* table = new QTableWidget(100, 6); // 3행 2열의 표를 생성
+    table->setHorizontalHeaderLabels(*list);
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QLineEdit* companyName = new QLineEdit();
@@ -40,6 +36,15 @@ void MyStock::initUi() {
     mainLayout->addWidget(table);
 
     mainLayout->setSpacing(0);
-
+//    QPushButton::connect(all->searchButton, &QPushButton::clicked, [=](){
+//        getMyStock();
+//    });
     setLayout(mainLayout);
 }
+
+//void MyStock::getMyStock() {
+//    string email = parent->pEdit->text().toUtf8().toStdString();
+//    Member* member = SQLController::getMember(UserSearchType::EMAIL, email);
+//    MyStockDto *myStock = SQLController::getMyStockList(member->memberId, 1, "1");
+//    cout << myStock[0].companyCode;
+//}

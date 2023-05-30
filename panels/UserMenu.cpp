@@ -5,7 +5,7 @@
 #include "UserMenu.h"
 #include "user/SignUp.h"
 
-UserMenu::UserMenu(QWidget *parent) : QWidget(parent){
+UserMenu::UserMenu(QWidget *parent, SQLController* sqlController) : QWidget(parent){
     initUi();
 }
 

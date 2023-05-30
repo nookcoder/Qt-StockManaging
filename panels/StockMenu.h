@@ -10,10 +10,11 @@
 #include <QLabel>
 #include <QPushButton>
 #include "../components/SearchInput.h"
+#include "../database/SQLController.h"
 
 class StockMenu : public QWidget{
 public:
-    explicit StockMenu(QWidget* parent = nullptr);
+    explicit StockMenu(QWidget* parent = nullptr, SQLController* sqlController = nullptr);
     QPushButton *backButton = new QPushButton("뒤로가기");
     QHBoxLayout *topLayout = new QHBoxLayout();
     SearchInput *loginInput;

@@ -9,10 +9,15 @@
 #include "QTabWidget"
 #include "QBoxLayout"
 #include "QLabel"
+#include "../StockMenu.h"
+
 class MyStock : public QWidget{
 public:
-    explicit MyStock(QWidget* parent = nullptr);
+    explicit MyStock(StockMenu* parent = nullptr);
+    StockMenu* parent;
     void initUi();
+private:
+    void getMyStock();
 };
 
 

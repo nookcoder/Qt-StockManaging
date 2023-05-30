@@ -6,10 +6,9 @@
 #include <QVBoxLayout>
 #include "MainMenu.h"
 
-MainMenu::MainMenu(QMainWindow *parent) : QWidget(parent){
+MainMenu::MainMenu(QMainWindow *parent, SQLController *sqlController) {
     initUi();
 }
-
 void MainMenu::initUi() {
     QLabel* label = new QLabel("사용자 메뉴");
     label->setAlignment(Qt::AlignCenter);
@@ -27,6 +26,4 @@ void MainMenu::turnPanel(QWidget *oldWidget, QWidget *newWidget) {
     oldWidget->hide();
     newWidget->show();
 }
-
-
 

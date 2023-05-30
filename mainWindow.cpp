@@ -28,10 +28,10 @@ void mainWindow::run() {
 void mainWindow::init() {
     stack = new QStackedWidget(this);
 
-    auto* mainMenu = new MainMenu(this); // 사용자 메뉴
-    auto* stockMenu = new StockMenu(this); // 주식 관련 메뉴
-    auto* userMenu = new UserMenu(this); // 유저 추가
-    auto* checkingSchema = new CheckingSchema(this);
+    MainMenu* mainMenu = new MainMenu(this, sqlController); // 메인 메뉴
+    auto* stockMenu = new StockMenu(this, sqlController); // 주식 관련 메뉴
+    auto* userMenu = new UserMenu(this, sqlController); // 유저 추가
+    auto* checkingSchema = new CheckingSchema(this, sqlController);
     stack->addWidget(mainMenu);
     stack->addWidget(stockMenu);
     stack->addWidget(userMenu);

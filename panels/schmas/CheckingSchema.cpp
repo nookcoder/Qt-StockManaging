@@ -6,9 +6,9 @@
 #include "CheckingSchema.h"
 
 using namespace std;
-CheckingSchema::CheckingSchema(QWidget *parent) {
+CheckingSchema::CheckingSchema(QWidget *parent, SQLController *sqlController) {
     initUi();
-
+    this->sqlController = sqlController;
 }
 void CheckingSchema::initUi() {
     auto *searchInput = new SearchInput(this, new QLabel("검색할 스키마 이름 : "),word);

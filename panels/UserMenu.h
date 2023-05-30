@@ -10,10 +10,11 @@
 #include <QPushButton>
 #include <QBoxLayout>
 #include <QTabWidget>
+#include "../database/SQLController.h"
 
 class UserMenu : public QWidget{
 public:
-    explicit UserMenu(QWidget* parent = nullptr);
+    explicit UserMenu(QWidget* parent = nullptr, SQLController* sqlController = nullptr);
     QPushButton *backButton = new QPushButton("뒤로가기");
     QHBoxLayout *topLayout = new QHBoxLayout();
     QTabWidget *tabWidget = new QTabWidget();

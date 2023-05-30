@@ -14,8 +14,9 @@
 #include "QTableWidget"
 class CheckingSchema : public QWidget{
 public:
-    explicit CheckingSchema(QWidget *parent = nullptr);
+    explicit CheckingSchema(QWidget *parent = nullptr, SQLController* sqlController = nullptr);
     QPushButton *backButton = new QPushButton("뒤로가기");
+    SQLController* sqlController;
 private:
     void initUi();
     void setTableWidgetBySchema(SQLCHAR *target);

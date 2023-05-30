@@ -12,6 +12,7 @@
 #include "./dto/Company.cpp"
 #include "./dto/Member.cpp"
 #include "./dto/Address.cpp"
+#include "./dto/MyStock.cpp"
 class SQLController {
 public:
     static std::string get_data_type_in_string(SQLSMALLINT i);
@@ -22,12 +23,11 @@ public:
     static Member* getMember(int searchType, string value);
     static void addMember(Member* member, Address* address);
     static SQLINTEGER addAddress(Address* address);
+
     static Company* getInterestingCompanyList(string userEmail, int type, string value);
-
     static void addInterestingCompany(const string& userEmail, string companyCode);
-
     static void deleteInterestingCompany(const string& userEmail, string companyCode);
-
+    static MyStockDto* getMyStockList(int memberId, int type, string value);
 };
 
 

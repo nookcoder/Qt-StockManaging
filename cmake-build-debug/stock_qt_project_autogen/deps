@@ -58,6 +58,7 @@ stock_qt_project_autogen/timestamp: \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/database/dto/Address.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/database/dto/Company.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/database/dto/Member.cpp \
+	/Users/wook/Desktop/세종대/projects/stock-qt-project/database/dto/MyStock.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/database/dto/Schema.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/main.cpp \
 	/Users/wook/Desktop/세종대/projects/stock-qt-project/mainWindow.cpp \

@@ -11,6 +11,7 @@
 #include <QVBoxLayout>
 #include "QWidget"
 #include "panels/MainMenu.h"
+#include "database/SQLController.h"
 
 class mainWindow: public QMainWindow{
 public:
@@ -18,7 +19,7 @@ public:
     void run();
 
     QStackedWidget *stack; // stack of panels
-
+    SQLController *sqlController = new SQLController();
     QWidget *main = new QWidget(this);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 private:

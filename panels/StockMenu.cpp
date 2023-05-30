@@ -10,7 +10,7 @@
 #include "interesting/AddingInterestingCompany.h"
 #include "../database/SQLController.h"
 #include "../constants/type/UserSearchType.cpp"
-StockMenu::StockMenu(QWidget *parent) : QWidget(parent) {
+StockMenu::StockMenu(QWidget *parent, SQLController *sqlController) : QWidget(parent) {
     initUi();
 }
 
@@ -40,7 +40,7 @@ void StockMenu::initUi() {
     // 메인 컴포넌트
     QVBoxLayout *mainLayout = new QVBoxLayout();
     QTabWidget *tabWidget = new QTabWidget();
-    MyStock *myStock = new MyStock(tabWidget); // 나의 주식
+    MyStock *myStock = new MyStock(this); // 나의 주식
     Dividend *dividend = new Dividend(tabWidget); // 나의 배당
     Following *following = new Following(tabWidget); //
     interestingCompany *interesting = new interestingCompany(this); // 나의 관심종목

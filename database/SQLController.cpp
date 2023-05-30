@@ -402,3 +402,52 @@ void SQLController::deleteInterestingCompany(const string &userEmail, string com
         databaseConnection::disconnect();
     }
 }
+
+MyStockDto *SQLController::getMyStockList(int memberId, int type, string value) {
+    if(databaseConnection::connect() == SQL_SUCCESS) {
+        SQLCHAR query[300];
+        snprintf((char *) query, 300, "SELECT C.COMPANY_CODE, SUM(D.TOTAL_AMOUNT), SUM(S.QUANTITY)\n"
+                                      "FROM SHAREHOLDER AS S, COMPANY AS C, DIVIDEND AS D \n"
+                                      "WHERE S.MEMBER = %d AND S.COMPANY = C.COMPANY_CODE AND S.DIVIDEND = D.DIVIDEND_NO\n"
+                                      "GROUP BY COMPANY_CODE", memberId);
+        cout << query << endl;
+        SQLRETURN retcode = SQLExecDirect(databaseConnection::hstmt, query, SQL_NTS);
+        if (retcode != SQL_SUCCESS) {
+            DBExceptionHandler::HandleDiagnosticRecord(databaseConnection::hstmt, SQL_HANDLE_STMT, retcode);
+            return nullptr;
+        }
+        cout << "RESULT : " << retcode <<endl;
+        auto *myStockDto = new MyStockDto();
+        // 소유한 주식의 종목코드, 배당금 총액, 수량을 가져온다.
+        SQLCHAR companyCode[30];
+        SQLCHAR companyName[100];
+        SQLCHAR companyEmail[100];
+        SQLCHAR companyPhone[100];
+        SQLINTEGER quantity;
+        SQLINTEGER sum;
+        SQLBindCol(databaseConnection::hstmt, 1, SQL_C_CHAR, companyCode, 30, NULL);
+        SQLBindCol(databaseConnection::hstmt, 2, SQL_C_ULONG, &sum, 0, NULL);
+        SQLBindCol(databaseConnection::hstmt, 3, SQL_C_ULONG, &quantity, 0, NULL);
+        int i = 0;
+        cout << "SQLBindCol : " <<endl;
+        while(SQLFetch(databaseConnection::hstmt) != SQL_NO_DATA) {
+            string code = string((char *)companyCode);
+            myStockDto[i].companyCode = code;
+            myStockDto[i].totalDividend = sum;
+            myStockDto[i].quantity = quantity;
+//            company = SQLController::getCompanyList(CompanySearchType::COMPANY_CODE, code);
+//            myStockDto[i].companyName = company[0].name;
+//            myStockDto[i].companyPhone = company[0].phone;
+//            myStockDto[i].companyEmail = company[0].email;
+            i++; // 다음 주식 정보를 가져온다.
+        }
+
+        myStockDto[i].companyCode = nullptr;
+
+        SQLCloseCursor(databaseConnection::hstmt);
+        SQLFreeHandle(SQL_HANDLE_STMT, databaseConnection::hstmt);
+        databaseConnection::disconnect();
+    } else {
+        cout << "DB 연결 실패" << endl;
+    }
+}
