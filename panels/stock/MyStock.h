@@ -10,6 +10,7 @@
 #include "QBoxLayout"
 #include "QLabel"
 #include "../StockMenu.h"
+#include <QTableWidget>
 
 class MyStock : public QWidget{
 public:
@@ -17,7 +18,9 @@ public:
     StockMenu* parent;
     void initUi();
 private:
-    void getMyStock();
+    MyStockDto* getMyStock();
+    QTableWidget* table;\
+    void setTableWidget(MyStockDto* myStock);
 };
 
 
