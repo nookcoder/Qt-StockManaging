@@ -410,13 +410,11 @@ MyStockDto *SQLController::getMyStockList(int memberId, int type, string value) 
                                       "FROM SHAREHOLDER AS S, COMPANY AS C, DIVIDEND AS D \n"
                                       "WHERE S.MEMBER = %d AND S.COMPANY = C.COMPANY_CODE AND S.DIVIDEND = D.DIVIDEND_NO\n"
                                       "GROUP BY COMPANY_CODE", memberId);
-        cout << query << endl;
         SQLRETURN retcode = SQLExecDirect(databaseConnection::hstmt, query, SQL_NTS);
         if (retcode != SQL_SUCCESS) {
             DBExceptionHandler::HandleDiagnosticRecord(databaseConnection::hstmt, SQL_HANDLE_STMT, retcode);
             return nullptr;
         }
-        cout << "RESULT : " << retcode <<endl;
         auto *myStockDto = new MyStockDto[50];
         // 소유한 주식의 종목코드, 배당금 총액, 수량을 가져온다.
         SQLCHAR companyCode[30];
@@ -429,7 +427,6 @@ MyStockDto *SQLController::getMyStockList(int memberId, int type, string value) 
         SQLBindCol(databaseConnection::hstmt, 2, SQL_C_SLONG, &sum, 0, nullptr);
         SQLBindCol(databaseConnection::hstmt, 3, SQL_C_SLONG, &quantity, 0, nullptr);
         int i = 0;
-        cout << "SQLBindCol : " <<endl;
         while(SQLFetch(databaseConnection::hstmt) != SQL_NO_DATA) {
             string code = string((char *)companyCode);
             myStockDto[i].companyCode = code;
